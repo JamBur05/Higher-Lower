@@ -17,7 +17,7 @@ dependencies {
 }
 
 application{
-    mainClass="org.example.Main"
+    mainClass="Main"
 }
 
 tasks.test {
