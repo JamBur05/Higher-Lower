@@ -35,6 +35,5 @@ public class Main extends Application {
         vm.setStageView(ViewManager.GAME);
 
         stage.show();
-
     }
 }
