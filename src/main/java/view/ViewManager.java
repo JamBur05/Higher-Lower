@@ -2,6 +2,7 @@ package view;
 
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.util.HashMap;
@@ -28,7 +29,12 @@ public class ViewManager {
             return;
         }
 
-        Scene s = new Scene(scenes.get(key));
+        Parent view = scenes.get(key);
+        StackPane root = new StackPane(view);
+        root.setId("pane");
+
+        Scene s = new Scene(root);
+        s.getStylesheets().addAll(this.getClass().getResource("/style.css").toExternalForm());
         stage.setScene(s);
     }
 

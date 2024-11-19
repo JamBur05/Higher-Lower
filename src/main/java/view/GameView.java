@@ -5,8 +5,13 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.EventHandler;
+import javafx.geometry.HPos;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.geometry.VPos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -30,8 +35,10 @@ public class GameView extends VBox implements ManagedView {
 
     private void buildView() {
         getChildren().clear();
+
         Text title = new Text("Game View");
         scoreText = new Text();
+        scoreText.setId("scoreText");
         ImageView imageView = new ImageView();
 
         scoreText.textProperty().bind(controller.scoreObject().asString("Score: %d"));
@@ -70,9 +77,24 @@ public class GameView extends VBox implements ManagedView {
             }
         });
 
+        GridPane gridPane = new GridPane();
+        gridPane.setMinSize(1200, 650);
+        gridPane.setPadding(new Insets(10, 10, 10, 10));
+        gridPane.setVgap(5);
+        gridPane.setHgap(5);
+
+        gridPane.setAlignment(Pos.CENTER);
+
+        //gridPane.add(title, 0, 0);
+        gridPane.add(scoreText, 1, 0);
+        gridPane.add(btnHigher, 0, 2);
+        gridPane.add(btnLower, 2, 2);
+        gridPane.add(imageView, 1, 1);
 
 
-        getChildren().addAll(title, imageView, btnHigher, btnLower, scoreText);
+
+
+        getChildren().addAll(gridPane);
     }
 
 
@@ -89,12 +111,38 @@ public class GameView extends VBox implements ManagedView {
                     imageView.setPreserveRatio(true);
                 }
                 Text title = new Text("Game Over!");
+                title.setId("scoreText");
                 Button btnRestart = new Button("Play Again");
                 btnRestart.setOnAction(e -> {
                     controller.restartGame();
                     buildView();
                 });
-                getChildren().addAll(title, btnRestart, imageView);
+
+                Button btnQuit = new Button("Quit Game");
+                btnQuit.setOnAction(e -> {
+                    System.exit(0);
+
+                });
+
+                GridPane gridPane = new GridPane();
+                gridPane.setMinSize(1200, 650);
+                gridPane.setPadding(new Insets(10, 10, 10, 10));
+                gridPane.setVgap(5);
+                gridPane.setHgap(5);
+
+                gridPane.setAlignment(Pos.CENTER);
+
+                gridPane.add(title, 1, 0);
+
+                GridPane.setHalignment(imageView, HPos.CENTER); // Ensure the image is horizontally centered in its cell
+                GridPane.setValignment(imageView, VPos.CENTER); // Ensure the image is vertically centered in its cell
+
+                gridPane.add(imageView, 1, 1);
+
+                gridPane.add(btnRestart, 0, 2);
+                gridPane.add(btnQuit, 2, 2);
+
+                getChildren().addAll(gridPane);
                 System.out.println("The game has ended!");
             }
         });

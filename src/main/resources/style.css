@@ -1,0 +1,38 @@
+#pane{
+    -fx-background-image: url("assets/poker_bg.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+#scoreText{
+    -fx-font-family: "Arial";
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #007BFF;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20 10 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+}
+
+.button:hover {
+    -fx-background-color: #0056b3;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 12, 0, 0, 7);
+}
+
+.button:pressed {
+    -fx-background-color: #003d80;
+    -fx-effect: none;
+    -fx-padding: 12 22 8 18;
+}

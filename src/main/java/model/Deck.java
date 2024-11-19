@@ -17,7 +17,7 @@ public class Deck {
         for(String suit : suits){
             for(String rank : ranks){
                 String filename = rank + "_of_" + suit + ".png";
-                Image cardImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/cards/" + filename)));
+                Image cardImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/assets/cards/" + filename)));
                 deck.add(new Card(Integer.parseInt(rank), suit, cardImage));
             }
         }
