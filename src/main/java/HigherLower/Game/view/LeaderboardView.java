@@ -1,6 +1,6 @@
-package view;
+package HigherLower.Game.view;
 
-import controller.GameController;
+import HigherLower.Game.controller.GameController;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;

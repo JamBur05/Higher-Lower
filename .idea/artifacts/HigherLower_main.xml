@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="HigherLower.main">
+    <output-path>$PROJECT_DIR$/out/artifacts/HigherLower_main</output-path>
+    <root id="root">
+      <element id="archive" name="HigherLower_main.jar">
+        <element id="module-output" name="HigherLower.main" />
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,4 +1,4 @@
-package model;
+package HigherLower.Game.model;
 
 import java.io.BufferedWriter;
 import java.io.IOException;

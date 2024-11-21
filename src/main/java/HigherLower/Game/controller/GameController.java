@@ -1,12 +1,12 @@
-package controller;
+package HigherLower.Game.controller;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.EventHandler;
-import model.Card;
-import model.Deck;
-import model.EventManager;
-import model.Leaderboard;
+import HigherLower.Game.model.Card;
+import HigherLower.Game.model.Deck;
+import HigherLower.Game.model.EventManager;
+import HigherLower.Game.model.Leaderboard;
 
 import java.util.ArrayList;
 import java.util.List;

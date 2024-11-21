@@ -1,4 +1,4 @@
-package view;
+package HigherLower.Game.view;
 
 import javafx.scene.Parent;
 import javafx.scene.Scene;

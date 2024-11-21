@@ -1,4 +1,4 @@
-package model;
+package HigherLower.Game.model;
 
 import javafx.event.Event;
 import javafx.event.EventType;

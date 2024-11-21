@@ -1,4 +1,4 @@
-package model;
+package HigherLower.Game.model;
 
 import javafx.scene.image.Image;
 

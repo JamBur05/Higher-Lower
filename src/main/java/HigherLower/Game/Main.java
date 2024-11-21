@@ -1,13 +1,15 @@
-import controller.GameController;
+package HigherLower.Game;
+
+import HigherLower.Game.controller.GameController;
 import javafx.application.Application;
 import javafx.geometry.Rectangle2D;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import model.Leaderboard;
-import view.GameView;
-import view.LeaderboardView;
-import view.MenuView;
-import view.ViewManager;
+import HigherLower.Game.model.Leaderboard;
+import HigherLower.Game.view.GameView;
+import HigherLower.Game.view.LeaderboardView;
+import HigherLower.Game.view.MenuView;
+import HigherLower.Game.view.ViewManager;
 
 
 public class Main extends Application {

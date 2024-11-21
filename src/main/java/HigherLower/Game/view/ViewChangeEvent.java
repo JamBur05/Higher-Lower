@@ -1,4 +1,4 @@
-package view;
+package HigherLower.Game.view;
 
 import javafx.event.Event;
 import javafx.event.EventType;
