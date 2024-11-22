@@ -32,6 +32,7 @@ public class MenuView extends VBox implements ManagedView {
     }
 
 
+    // Builds main menu view
     private void buildView() {
         getChildren().clear();
         Text title = new Text("Higher or Lower?");
@@ -51,10 +52,12 @@ public class MenuView extends VBox implements ManagedView {
         TextField username = new TextField();
         username.setText("Username");
 
+        // Event listener for rules button press
         btnRules.setOnAction(e -> {
             showRules();
         });
 
+        // Event listener for start button press
         btnStart.setOnAction(e -> {
             var eh = onViewChange.get();
             if (eh != null) {
@@ -66,6 +69,7 @@ public class MenuView extends VBox implements ManagedView {
             }
         });
 
+        // Event listener for leaderboard button press
         btnLeaderboard.setOnAction(e -> {
             var eh = onViewChange.get();
             if (eh != null) {
@@ -73,6 +77,7 @@ public class MenuView extends VBox implements ManagedView {
             }
         });
 
+        // Event listener for quit button press
         btnQuit.setOnAction(e -> {
            System.exit(0);
         });
@@ -85,6 +90,7 @@ public class MenuView extends VBox implements ManagedView {
 
         gridPane.setAlignment(Pos.CENTER);
 
+        // Row constraints to help with aligning gridpane elements
         RowConstraints row1 = new RowConstraints();
         row1.setMinHeight(50);
         row1.setPrefHeight(80);
@@ -99,6 +105,7 @@ public class MenuView extends VBox implements ManagedView {
 
         gridPane.getRowConstraints().addAll(row1, row2, row3);
 
+        // Add all elements to gridpane
         gridPane.add(title, 0, 0, 3, 1);
         GridPane.setHalignment(title, HPos.CENTER);
         GridPane.setValignment(title, VPos.TOP);
@@ -124,23 +131,30 @@ public class MenuView extends VBox implements ManagedView {
         getChildren().add(gridPane);
     }
 
+    // Function to build the rules view
     private void showRules() {
         getChildren().clear();
 
         Text title = new Text("How to play!");
+
         title.setId("title");
         title.setFill(Color.color(0.9137254901960784, 0.1843137254901961, 0.4666666666666667));
         title.setStrokeWidth(1);
         title.setStroke(Color.WHITE);
+
         Text rules = new Text("To play the game, simply select higher or lower depending\n" +
                 "on what you think the next card will be when compared to the current card.\n" +
                 "\nAces count as a 1\n" +
                 "Jokers count as 14");
+
         rules.setId("scoreText");
         rules.setFill(Color.color(0.9137254901960784, 0.1843137254901961, 0.4666666666666667));
         rules.setStrokeWidth(0.5);
         rules.setStroke(Color.WHITE);
+
         Button btnReturn = new Button("Return to menu");
+
+        // Event listener for return button press
         btnReturn.setOnAction(e -> {
            buildView();
         });
@@ -153,6 +167,7 @@ public class MenuView extends VBox implements ManagedView {
 
         gridPane.setAlignment(Pos.CENTER);
 
+        // Add all elements to gripdane
         gridPane.add(title, 0, 0);
         GridPane.setHalignment(title, HPos.CENTER);
         GridPane.setValignment(title, VPos.CENTER);

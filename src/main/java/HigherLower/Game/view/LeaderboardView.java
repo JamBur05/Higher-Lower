@@ -34,6 +34,7 @@ public class LeaderboardView extends VBox implements ManagedView {
         buildView();
     }
 
+    // Builds main leaderboard view
     private void buildView(){
         getChildren().clear();
 
@@ -70,6 +71,7 @@ public class LeaderboardView extends VBox implements ManagedView {
 
         gridPane.setAlignment(Pos.CENTER);
 
+        // Add all elements to gridpane
         gridPane.add(title, 0, 0);
         GridPane.setHalignment(title, HPos.CENTER);
         GridPane.setValignment(title, VPos.CENTER);

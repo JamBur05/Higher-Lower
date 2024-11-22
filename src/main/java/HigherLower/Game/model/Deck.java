@@ -46,7 +46,6 @@ public class Deck {
 
     // Get the next card of the deck and return it
     public Card getNextCard(){
-        System.out.println(deck.size());
         if (deck.isEmpty()) {
             return null;
         }

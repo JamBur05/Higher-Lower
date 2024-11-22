@@ -52,6 +52,7 @@ public class GameController {
         }
     }
 
+    // Function to handle higher user input
     public Card inputHigher(){
         Card currentCard = deck.getCurrentCard();
         Card nextCard = deck.getNextCard();
@@ -66,6 +67,7 @@ public class GameController {
         }
     }
 
+    // Function to handle lower user input
     public Card inputLower(){
         Card currentCard = deck.getCurrentCard();
         Card nextCard = deck.getNextCard();
@@ -118,6 +120,7 @@ public class GameController {
         leaderboard.writeScore(username, playerScore.get());
     }
 
+    // Function to get top scores and return them in a sorted list
     public List<String> getTopScores(int n) {
         ArrayList<String> allScores = leaderboard.getAllScores();
 
