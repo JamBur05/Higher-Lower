@@ -26,7 +26,7 @@ java --module-path "C:\Program Files\javafx-sdk-23.0.1\lib" --add-modules javafx
 
 ### MVC Architecture
 
-To structure the project in a clean and maintainable way, I followed the Model View Controller (MVC) design pattern. This separation of concerns also makes it easier to extend the game with new features, such as adding a any additional views, or game mechanics.
+To structure the project in a clean and maintainable way, I followed the Model View Controller (MVC) design pattern. This separation of concerns also makes it easier to extend the game with new features, such as adding any additional views, or game mechanics.
 
 Model:
 
