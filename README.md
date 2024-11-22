@@ -22,7 +22,32 @@ java --module-path "C:\Program Files\javafx-sdk-23.0.1\lib" --add-modules javafx
 
 - Make sure to replace the path "C:\Program Files\javafx-sdk-23.0.1\lib" with the actual location of the lib folder inside your JavaFX SDK if it's installed in a different directory.
 
-### Ideas for Improvement
+## Design Choices
+
+### MVC Architecture
+
+To structure the project in a clean and maintainable way, I followed the Model View Controller (MVC) design pattern. This separation of concerns also makes it easier to extend the game with new features, such as adding a any additional views, or game mechanics.
+
+Model:
+
+- Card: Stores data for each card in a deck of cards, including its rank, suit and sprite.
+- Deck: Initialises and stores a collection of cards.
+- EventManager: Generic implementation for handling game events such as the game ending.
+
+View:
+
+- MenuView: Contains all view logic for the main menu
+- GameView: Contains all view logic for the game
+- LeaderboardView: Contains all view logic for displaying the stored, local leaderboard
+- ManagedView: Generic interface, allowing the ViewManager to manage a view
+- ViewChangeEvent: Used to raise an event when a ViewManager changes the displayed view
+- ViewManager: Manages the scenes available in the application
+
+Controller:
+
+- GameController: Handles all game logic by interacting with the Model and View
+
+## Ideas for Improvement
 
 In the future, I plan on adding the following features:
 
@@ -35,6 +60,6 @@ In the future, I plan on adding the following features:
 - Global leaderboard
   - Show additional leaderboard of global scores
 
-### Video Demo
+## Video Demo
 
 [Watch the demo on YouTube here](https://youtu.be/ch9s0mqqC60)
