@@ -38,5 +38,5 @@ In the future, I plan on adding the following features:
 ### Video Demo
 
 <video width="320" height="240" controls>
-  <source src="/resources/Demo_Video.mp4" type="video/mp4">
+  <source src="resources/Demo_Video.mp4" type="video/mp4">
 </video>
